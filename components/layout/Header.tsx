@@ -66,16 +66,16 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-screen h-screen border-none p-0 overflow-hidden"
+              className="w-screen h-full border-none p-0 overflow-hidden"
             >
-              <div className="flex flex-col glassmorphic h-full pt-10">
+              <div className="flex flex-col glassmorphic h-full justify-center">
                 <nav className="flex flex-col items-center justify-center px-6 flex-1">
                   {navItems.map((item, index) => (
                     <Link
                       key={item.href}
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="text-lg txt-fnt text-[#3474FF] font-bold hover:text-primary hover:bg-primary/10 transition-all duration-200 px-5 py-4 rounded-2xl group relative overflow-hidden"
+                      className="text-[40px] txt-fnt text-[#3474FF] font-bold hover:text-primary hover:bg-primary/10 transition-all duration-200 px-5 py-4 rounded-2xl group relative overflow-hidden"
                       style={{
                         animation: isOpen ? `slideInRight 0.3s ease-out ${index * 0.1}s both` : "none",
                       }}
@@ -88,7 +88,7 @@ export default function Header() {
 
                 <div className="p-6 border-t border-border/20">
                   <Button
-                    className="w-full rounded-full bg-primary hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/50 font-bold text-base py-4"
+                    className="w-full txt-fnt rounded-full bg-primary hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/50 font-bold text-[24px] py-4"
                     onClick={() => setIsOpen(false)}
                   >
                     Try Demo

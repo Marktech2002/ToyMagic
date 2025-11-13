@@ -44,10 +44,10 @@ function StepCard({
   cardRef,
 }: StepCardProps) {
   const textContent = (
-    <div className="flex flex-col gap-2 lg:gap-3">
+    <div className="flex flex-col gap-2 pl-4 lg:gap-3">
       <div className="flex items-center gap-2 lg:gap-2">
-        <h3 
-          className="max-w-[488px] text-[24px] txt-fnt leading-[34px] lg:text-[40px] lg:leading-[inherit]" 
+        <h3
+          className="max-w-[488px] text-[24px] txt-fnt leading-[34px] lg:text-[40px] lg:leading-[inherit]"
           style={{ color: titleColor }}
         >
           {title}
@@ -57,7 +57,7 @@ function StepCard({
         </div>
       </div>
 
-      <p className="body-how-it-works text-black max-w-[488px] text-[16px] leading-[24px] lg:text-[18px] lg:leading-[inherit]">
+      <p className="body-how-it-works text-black md:max-w-[488px] max-w-[300px] pb-4 text-[16px] leading-[24px] lg:text-[18px] lg:leading-[inherit]">
         {description}
       </p>
     </div>
@@ -65,8 +65,8 @@ function StepCard({
 
   const imageContent = (
     <div
-      className="w-full lg:w-[488px] h-[380px] lg:h-[488px] rounded-3xl lg:rounded-4xl flex items-center justify-center p-4 lg:p-0"
-      style={{ backgroundColor }}
+      className="w-full lg:w-[488px] h-[380px] lg:h-[488px] rounded-3xl lg:rounded-4xl flex items-center md:justify-center px-4 lg:p-0"
+      // style={{ backgroundColor }}
     >
       <div className="relative w-full h-full max-w-[320px] lg:max-w-none">
         <Image
@@ -74,7 +74,7 @@ function StepCard({
           alt={title}
           width={488}
           height={488}
-          className="w-full h-full object-contain"
+          className="absolute rounded-4xl inset-0 w-full h-full object-cover md:object-contain"
         />
       </div>
     </div>
@@ -82,17 +82,26 @@ function StepCard({
 
   return (
     <div ref={cardRef} className="flex flex-col gap-6 lg:gap-8 lg:mt-8">
-      {reverseOrder ? (
-        <>
-          {imageContent}
-          {textContent}
-        </>
-      ) : (
-        <>
-          {textContent}
-          {imageContent}
-        </>
-      )}
+      {/* Mobile: Always text first */}
+      <div className="lg:hidden">
+        {textContent}
+        {imageContent}
+      </div>
+
+      {/* Desktop: Respect reverseOrder prop */}
+      <div className="hidden lg:flex lg:flex-col lg:gap-8">
+        {reverseOrder ? (
+          <>
+            {imageContent}
+            {textContent}
+          </>
+        ) : (
+          <>
+            {textContent}
+            {imageContent}
+          </>
+        )}
+      </div>
     </div>
   );
 }
@@ -157,7 +166,7 @@ export default function HowItWorks() {
     <section ref={sectionRef} className="py-8 lg:py-2">
       <div className="max-w-7xl mx-auto px-4 lg:px-16">
         {/* Header Badge */}
-        <div 
+        <div
           ref={headerRef}
           className="flex items-center text-[#3474FF] gap-[12px] px-5 py-2 lg:px-6 lg:py-2 rounded-[100px] bg-blue-light w-fit mb-10 lg:mb-12"
         >
@@ -184,17 +193,17 @@ export default function HowItWorks() {
                 reverseOrder={false}
                 cardRef={(el) => { cardsRef.current[0] = el; }}
               />
-              
+
               {/* Smiley Icon - top right - DESKTOP ONLY */}
-              <div 
+              <div
                 ref={(el) => { decorationsRef.current[0] = el; }}
                 className="hidden lg:block absolute -top-10 -right-[500px]"
               >
                 <SmileyFaceIcon width={141} height={140} />
               </div>
-              
+
               {/* Curved Arrow - points down-right to Card 2 - DESKTOP ONLY */}
-              <div 
+              <div
                 ref={(el) => { decorationsRef.current[1] = el; }}
                 className="hidden lg:block absolute bottom-[-350px] right-[-200px]"
               >
@@ -219,7 +228,7 @@ export default function HowItWorks() {
             />
 
             {/* Blow Emoji at bottom - DESKTOP ONLY */}
-            <div 
+            <div
               ref={(el) => { decorationsRef.current[2] = el; }}
               className="hidden lg:block"
             >
@@ -242,9 +251,9 @@ export default function HowItWorks() {
                 reverseOrder={true}
                 cardRef={(el) => { cardsRef.current[1] = el; }}
               />
-              
+
               {/* Arrow from Card 1 to Card 2 - DESKTOP ONLY */}
-              <div 
+              <div
                 ref={(el) => { decorationsRef.current[3] = el; }}
                 className="hidden lg:block absolute -top-[255px] -left-[220px]"
               >
@@ -268,9 +277,9 @@ export default function HowItWorks() {
                 reverseOrder={false}
                 cardRef={(el) => { cardsRef.current[3] = el; }}
               />
-              
+
               {/* Arrow from Card 3 to Card 4 - DESKTOP ONLY */}
-              <div 
+              <div
                 ref={(el) => { decorationsRef.current[4] = el; }}
                 className="hidden lg:block absolute -top-[190px] -left-60"
               >
