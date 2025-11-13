@@ -1,9 +1,8 @@
-export default function MenuIcon({ width = 18, height = 12, color = "#000000" }: { width?: number; height?: number; color?: string }) {
+export default function MenuIcon({ width = 44, height = 44, color = "#000000" }: { width?: number; height?: number; color?: string }) {
   return (
-    <svg width={width} height={height} viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 1H18" stroke={color} strokeWidth="2"/>
-      <path d="M0 6H18" stroke={color} strokeWidth="2"/>
-      <path d="M0 11H18" stroke={color} strokeWidth="2"/>
+    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.5 33V29.3333H38.5V33H5.5ZM5.5 23.8333V20.1667H38.5V23.8333H5.5ZM5.5 14.6667V11H38.5V14.6667H5.5Z" fill="black" />
     </svg>
+
   );
 }

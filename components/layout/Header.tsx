@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import LogoIcon from "@/components/icons/LogoIcon";
+import MenuIcon from "../icons/MenuIcon";
 import Image from "next/image";
 
 const navItems = [
@@ -55,14 +56,18 @@ export default function Header() {
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button
-                variant="ghost"
-                size="icon"
+              <button
                 className="relative rounded-full hover:bg-primary/10 transition-all duration-300"
               >
-                <Menu className={`h-12 w-12 transition-all duration-300 ${isOpen ? "rotate-90 opacity-0" : "rotate-0 opacity-100"}`} />
-                <X className={`h-12 w-12 absolute transition-all duration-300 ${isOpen ? "rotate-0 opacity-100" : "-rotate-90 opacity-0"}`} />
-              </Button>
+                <Menu
+                  size={34}
+                  className={`transition-all duration-300 ${isOpen ? "rotate-90 opacity-0" : "rotate-0 opacity-100"}`}
+                />
+                <X
+                  size={34}
+                  className={`absolute transition-all duration-300 ${isOpen ? "rotate-0 opacity-100" : "-rotate-90 opacity-0"}`}
+                />
+              </button>
             </SheetTrigger>
             <SheetContent
               side="right"
@@ -75,7 +80,7 @@ export default function Header() {
                       key={item.href}
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="text-[40px] txt-fnt text-[#3474FF] font-bold hover:text-primary hover:bg-primary/10 transition-all duration-200 px-5 py-4 rounded-2xl group relative overflow-hidden"
+                      className="text-[34px] txt-fnt text-[#3474FF] font-bold hover:text-primary hover:bg-primary/10 transition-all duration-200 px-5 py-4 rounded-2xl group relative overflow-hidden"
                       style={{
                         animation: isOpen ? `slideInRight 0.3s ease-out ${index * 0.1}s both` : "none",
                       }}

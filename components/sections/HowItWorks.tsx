@@ -45,14 +45,14 @@ function StepCard({
 }: StepCardProps) {
   const textContent = (
     <div className="flex flex-col gap-2 pl-4 lg:gap-3">
-      <div className="flex items-center gap-2 lg:gap-2">
+      <div className="flex items-center gap-1 lg:gap-1">
         <h3
-          className="max-w-[488px] text-[24px] txt-fnt leading-[34px] lg:text-[40px] lg:leading-[inherit]"
+          className="max-w-[488px] text-[24px] txt-fnt md:leading-[34px] lg:text-[35px] lg:leading-[inherit]"
           style={{ color: titleColor }}
         >
           {title}
         </h3>
-        <div className="flex items-center gap-4 justify-center w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] flex-shrink-0">
+        <div className="flex items-center gap-4 md:gap-4 justify-center w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] flex-shrink-0">
           {emojiIcon}
         </div>
       </div>
@@ -185,7 +185,7 @@ export default function HowItWorks() {
               <StepCard
                 title="Take a Picture!"
                 description="Open the app and snap a photo of your toy. It's just like magic!"
-                phoneImage="/images/phone-blue.svg"
+                phoneImage="/images/phone-blue.png"
                 backgroundColor="#3474FF"
                 titleColor="#3474FF"
                 emojiIcon={<CameraEmojiIcon width={40} height={40} />}
@@ -218,7 +218,7 @@ export default function HowItWorks() {
             <StepCard
               title="Meet Your Toy"
               description="Open the app and snap a photo of your toy. It's just like magic!"
-              phoneImage="/images/phone-orange.svg"
+              phoneImage="/images/phone-orange.png"
               backgroundColor="#E09800"
               titleColor="#E09800"
               emojiIcon={<PeaceHandIcon width={40} height={40} />}
@@ -243,7 +243,7 @@ export default function HowItWorks() {
               <StepCard
                 title="Let the Scanner Work"
                 description="Our friendly AI scans your toy, finds its name, and learns all about it!"
-                phoneImage="/images/phone-purple.svg"
+                phoneImage="/images/phone-purple.png"
                 backgroundColor="#893DED"
                 titleColor="#893DED"
                 emojiIcon={<SparklesIcon width={40} height={40} />}
@@ -269,7 +269,7 @@ export default function HowItWorks() {
               <StepCard
                 title="Share with Friends"
                 description="Open the app and snap a photo of your toy. It's just like magic!"
-                phoneImage="/images/phone-green.svg"
+                phoneImage="/images/phone-green.png"
                 backgroundColor="#3BC377"
                 titleColor="#3BC377"
                 emojiIcon={<ArrowEmojiIcon width={40} height={40} />}
