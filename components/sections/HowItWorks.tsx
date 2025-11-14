@@ -217,7 +217,7 @@ export default function HowItWorks() {
             {/* Card 3 - Meet Your Toy - IMAGE FIRST */}
             <StepCard
               title="Meet Your Toy"
-              description="Open the app and snap a photo of your toy. It's just like magic!"
+              description="Get to know your toy in seconds. Works always like magic!"
               phoneImage="/images/phone-orange.png"
               backgroundColor="#E09800"
               titleColor="#E09800"
@@ -268,7 +268,7 @@ export default function HowItWorks() {
             <div className="relative">
               <StepCard
                 title="Share with Friends"
-                description="Open the app and snap a photo of your toy. It's just like magic!"
+                description=" With a single tap , share favourite toy collections with friends like magic!"
                 phoneImage="/images/phone-green.png"
                 backgroundColor="#3BC377"
                 titleColor="#3BC377"

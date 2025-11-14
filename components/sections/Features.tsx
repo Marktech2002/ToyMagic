@@ -107,7 +107,8 @@ export default function Features() {
                   Toy collection<br />library
                 </h3>
                 <p className="text-sm lg:text-base lg:max-w-[390px]">
-                  Smart identification using AI-powered recognition for fast and accurate toy discovery.
+                 Smart AI recognition for quick toy discovery and effortless collection cataloging.
+
                 </p>
               </div>
 
@@ -182,7 +183,7 @@ export default function Features() {
                   Share with friends<br />easily
                 </h3>
                 <p className="text-sm lg:text-base lg:max-w-[390px]">
-                  Smart identification using AI-powered recognition for fast and accurate toy discovery.
+                  Share your favourite toy collection list with friends and family in just a few taps.
                 </p>
               </div>
 
